@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Dennes Front-End Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <h1>DWD</h1>
+        <nav>
+            <ul>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+            </ul>
+        </nav>
+        <img src="images/github-mark.svg" alt="git-hub-link">
+    </header>
+
+    <main>
+        <article id="projects">
+            <h2>Projects</h2>
+            <section class="UA">
+                <h2>User Arts</h2>
+                <p>
+                    In my eyes presentation is an essential part of art
+                    (photography, drawing, etc) as how the person sees a piece of 
+                    art can greatly influence how they feel while looking at it. 
+                    Each section of this site provides a different way to present 
+                    your art to give a different feeling to it.
+                </p>
+                <a href="https://denito37.github.io/UserArts/">Live Site</a>
+                <a href="https://github.com/Denito37/UserArts">GitHub Repo</a>
+            </section>
+            <section class="AG">
+                <h2>Advice Generator</h2>
+                <p>
+                    Original design based on assigment on 
+                    <a href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db">Frontend Mentor.</a>
+                    Many features added on top of the orginal concept.Fun to past 
+                    the time with while possibly getting advice that can resonate with you.
+                </p>
+                <a href="https://denito37.github.io/advice-generator-app-main/">Live Site</a>
+                <a href="https://github.com/Denito37/advice-generator-app-main">GitHub Repo</a>
+            </section>
+        </article>
+
+        <article id="skills">
+            <h2>Skills</h2>
+            <div class="wrap">
+            <section class="design">
+                <h2>Design</h2>
+                <h4>Figma</h4>
+                <h4>CSS</h4>
+                <h4>UI Principles</h4>
+            </section>
+            <section class="tech">
+                <h2>Technical</h2>
+                <h4>HTML</h4>
+                <h4>JS</h4>
+                <h4>Chrome Dev Tools</h4>
+                <h4>GitHub</h4>
+            </section>
+            </div>
+        </article>
+
+        <div class="wrap">
+        <article id="about">
+            <h2>About Me</h2>
+            <p>I’m a front-end web developer with the intent of making visually appealing 
+                web designs that are easy to use for the user.
+            When I choose web development for my career as opposed to software engineering 
+            I was already two years into my Bachelor’s computer science degree at 
+            Hunter College. Due to this change of goals I decided to stop going for 
+            a bachelor’s degree as I believed that the next two years of my life 
+            would be better spent fully focusing on improving my capabilities in 
+            front-end web development to start my career in it.</p>
+        </article>
+
+        <form action="" id="contact">
+            <fieldset>
+                <legend>Contact</legend>
+                <label for="name">name</label>
+                <input type="text" name="name" id="name">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email">
+                <label for="subject">subject</label>
+                <input type="text" name="subject" id="subject">
+                <label for="message">message</label>
+                <textarea name="message" id="message" cols="20" rows="10"></textarea>
+                <button type="submit" id="submit">SUBMIT</button>
+            </fieldset>
+        </form>
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+            </ul>
+        </nav>
+    </footer>
+    
+</body>
+</html>
