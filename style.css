@@ -13,11 +13,11 @@ body{
     box-sizing: border-box;
     margin: 0;
     font-family: 'Inter',sans-serif;
-    background: url(images/dust_texture\ copy.svg);
+    background: url(images/doodle.svg);
 }
 img{
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
 }
 a{
     text-decoration: none;
@@ -25,20 +25,17 @@ a{
     font-weight: 800;
     padding: 0rem .5rem;
 }
-a:hover{
-    outline: solid 2px black;
-}
 h2,h4{
-    text-align: center;
-}
-legend{
     text-align: center;
 }
 /* *HEADER */
 header{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    padding: .5rem 2rem;
+    background-color: #d9d9d9;
 }
 header nav{
     align-self: center;
@@ -46,19 +43,22 @@ header nav{
     display: none;
 }
 /* *MAIN */
-section{
+section, #about{
     margin: 1rem;
     padding: 2rem;
     border: 2px solid var(--acc-clr);
     background-color: #fff;
 }
-#about{
-    margin: 1rem;
-    padding: 2rem;
-    border: 2px solid var(--acc-clr);
-    background-color: #fff;
-    max-width: 700px;
+section .links a:hover{
+    outline: solid 2px black;
 }
+.design p, .tech p{
+    max-width: 60ch;
+}
+#about p{
+    max-width: 60ch;
+}
+/* *FORM */
 fieldset{
     display: flex;
     flex-direction: column;
@@ -96,14 +96,43 @@ footer ul{
 footer a{
     color: #fff;
 }
+/* *DESKTOP */
 @media (min-width:769px){
+    main{
+        margin: 1rem 4rem;
+    }
     .wrap{
         display: flex;
+    }
+    header{
+        position: static;
+        background-color: transparent;
     }
     header nav{
         display: inline;
     }
+    #projects section{
+        position: relative;
+        display: grid;
+        grid-template-columns: fit-content(30ch) fit-content(70ch);
+        grid-template-rows: 1fr .5fr;
+        column-gap: 7rem;
+    }
+    #projects section h2{
+        grid-area: 1/1/1/1;
+    }
+    #projects section .links{
+        text-align: center;
+        grid-area: 2/1/2/1;
+    }
+    #projects section p{
+        grid-area: 1/2/3/2;
+    }
     .design, .tech{
         padding: 3rem 6rem;
+    }
+    #about, fieldset{
+        padding: 3rem;
+        min-width: 30ch;
     }
 }
