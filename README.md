@@ -8,7 +8,7 @@ Live site : [https://denito37.github.io/wdp/]
 
 **Features**
 - Showcases my main projects with a description, github repo & live site
-- describes both my design & technical skills
+- describes both my design & technical skills w/ a short description on how I use the tool.
 - a small paragraph to let you know a little about me
 - a contact component to send an email to me
 

@@ -28,6 +28,10 @@ a{
 h2,h4{
     text-align: center;
 }
+p{
+    line-height: 1.5;
+}
+/* *MOBILE MENU */
 .menu{
     width: 0;
     height: 0;
@@ -57,12 +61,22 @@ header{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    padding: .5rem 2rem;
+    padding: 0.25rem 2rem;
     background-color: #d9d9d9;
+}
+header h1 sub{
+    font-weight: 200;
 }
 header nav{
     align-self: center;
     text-align: center;
+    display: none;
+}
+header nav a{
+    font-weight: 400;
+    padding: 0rem 1rem;
+}
+.github{
     display: none;
 }
 #open{
@@ -75,9 +89,6 @@ section, #about{
     padding: 2rem;
     border: 2px solid var(--acc-clr);
     background-color: #fff;
-}
-section .links a:hover{
-    outline: solid 2px black;
 }
 .design p, .tech p{
     max-width: 60ch;
@@ -109,9 +120,6 @@ fieldset button{
     border-radius: 1rem;
     border: 1px solid;
 }
-fieldset button:hover{
-    outline: solid 2px black;
-}
 /* *FOOTER */
 footer{
     background-color: var(--ftr-clr);
@@ -122,11 +130,16 @@ footer ul{
 }
 footer a{
     color: #fff;
+    font-weight: 400;
 }
 /* *DESKTOP */
 @media (min-width:769px){
     .menu{
         display: none;
+    }
+    .github:hover{
+        content: url(images/github-mark-white.svg);
+        height: 50px;
     }
     main{
         margin: 1rem 4rem;
@@ -138,11 +151,17 @@ footer a{
         position: static;
         background-color: transparent;
     }
+    header nav a:hover{
+        font-weight: 800;
+    }
     #open{
         display: none;
     }
     header nav{
         display: inline;
+    }
+    .github{
+        display: block;
     }
     #projects section{
         position: relative;
@@ -158,6 +177,9 @@ footer a{
         text-align: center;
         grid-area: 2/1/2/1;
     }
+    section .links a:hover{
+        outline: solid 2px black;
+    }
     #projects section p{
         grid-area: 1/2/3/2;
     }
@@ -167,5 +189,11 @@ footer a{
     #about, fieldset{
         padding: 3rem;
         min-width: 30ch;
+    }
+    fieldset button:hover{
+        outline: solid 2px black;
+    }
+    footer a:hover{
+        font-weight: 800;
     }
 }

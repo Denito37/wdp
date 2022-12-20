@@ -10,6 +10,7 @@ openM.addEventListener('click', () => {
     menu.style.padding = "1rem 1rem 100% 1rem";
     closeM.style.opacity = "1";
     links.style.opacity = "1";
+    links.style.display = 'block'
 });
 closeM.addEventListener('click', () =>{
     menu.style.height = '0%';
@@ -17,6 +18,7 @@ closeM.addEventListener('click', () =>{
     menu.style.padding = "0 0 0 0";
     closeM.style.opacity = "0";
     links.style.opacity = "0";
+    links.style.display = 'none'
 });
 submit.addEventListener('click', (e) => {
     e.preventDefault();
