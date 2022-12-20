@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap');
 :root{
-    --txt-clr:hsl(0,0%,0%);
-    --ftr-clr: hsl(0,0%,40%);
+    --txt-clr:hsl(0,0%,10%);
+    --ftr-clr: hsl(0,0%,15%);
     --acc-clr:hsl(0,0%,85%);
     --link-clr:hsl(240,5%,35%);
 }
@@ -14,19 +14,19 @@ body{
     margin: 0;
     font-family: 'Inter',sans-serif;
     background: url(images/doodle.svg);
-}
-img{
-    height: 50px;
-    width: 50px;
+    color: var(--txt-clr);
 }
 a{
     text-decoration: none;
-    color: var(--link-clr);
+    color: #fff;
     font-weight: 800;
     padding: 0rem .5rem;
 }
-h2,h4{
+h2,h4,p{
     text-align: center;
+}
+article >h2{
+    color: #fff;
 }
 p{
     line-height: 1.5;
@@ -37,32 +37,26 @@ p{
     height: 0;
     padding: 0;
     position: fixed;
-    background-color: #d9d9d9;
+    background-color: #333;
     z-index: 2;
     transition: width .5s;
 }
-.menu ul{
+#mobileLinks{
     opacity: 0;
-    display: block;
+    display: none;
+    padding: 3rem 0rem;
 }
 .menu ul a{
-    padding: 0rem 3rem;
+    padding: .5rem 3rem;
     font-size: 2rem;
-}
-.menu button{
-    opacity: 0;
-    border: solid 0px;
-    background-color: transparent;
-    margin: 1rem;
+    display: block;
 }
 /* *HEADER */
 header{
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
     padding: 0.25rem 2rem;
-    background-color: #d9d9d9;
+    color: #fff;
 }
 header h1 sub{
     font-weight: 200;
@@ -81,7 +75,16 @@ header nav a{
 }
 #open{
     border: solid 0px;
+    border-radius: 50%;
     background-color: transparent;
+}
+#open img{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 50%;
+    padding: .5rem;
+    background-color: #333;
 }
 /* *MAIN */
 section, #about{
@@ -90,8 +93,17 @@ section, #about{
     border: 2px solid var(--acc-clr);
     background-color: #fff;
 }
+section a{
+    color: var(--link-clr);
+}
+section .links{
+    text-align: center;
+}
 .design p, .tech p{
     max-width: 60ch;
+}
+#about h2{
+    color: var(--txt-clr);
 }
 #about p{
     max-width: 60ch;
@@ -129,28 +141,30 @@ footer ul{
     text-align: center;
 }
 footer a{
-    color: #fff;
     font-weight: 400;
 }
 /* *DESKTOP */
 @media (min-width:769px){
+    /**GENERAL */
+    img{
+        height: 50px;
+        width: 50px;
+    }
+    p{
+        text-align: left;
+    }
+    /**MOBILE_MENU */
     .menu{
         display: none;
     }
-    .github:hover{
-        content: url(images/github-mark-white.svg);
-        height: 50px;
-    }
+    /**MAIN */
     main{
         margin: 1rem 4rem;
     }
     .wrap{
         display: flex;
     }
-    header{
-        position: static;
-        background-color: transparent;
-    }
+    /**HEADER */
     header nav a:hover{
         font-weight: 800;
     }
@@ -163,6 +177,13 @@ footer a{
     .github{
         display: block;
     }
+    .github img{
+        transition: filter .25s ease-out;
+    }
+    .github img:hover{
+        filter: brightness(7);
+    }
+    /**PROJECTS */
     #projects section{
         position: relative;
         display: grid;
@@ -174,7 +195,6 @@ footer a{
         grid-area: 1/1/1/1;
     }
     #projects section .links{
-        text-align: center;
         grid-area: 2/1/2/1;
     }
     section .links a:hover{
@@ -183,9 +203,11 @@ footer a{
     #projects section p{
         grid-area: 1/2/3/2;
     }
+    /**SKILLS */
     .design, .tech{
         padding: 3rem 6rem;
     }
+    /**FORM */
     #about, fieldset{
         padding: 3rem;
         min-width: 30ch;
@@ -193,7 +215,21 @@ footer a{
     fieldset button:hover{
         outline: solid 2px black;
     }
+    /**FOOTER */
     footer a:hover{
         font-weight: 800;
     }
+}
+/* *ADD IN JS*/
+.icon{
+    content: url(images/close_FILL0_wght400_GRAD0_opsz48.svg);
+}
+.openMenu{
+    height: 100%;
+    width: 70vw;
+    padding: 1rem 1rem 100% 1rem;
+}
+.showLinks{
+    opacity: 1 !important;
+    display: block !important;
 }
