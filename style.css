@@ -28,6 +28,29 @@ a{
 h2,h4{
     text-align: center;
 }
+.menu{
+    width: 0;
+    height: 0;
+    padding: 0;
+    position: fixed;
+    background-color: #d9d9d9;
+    z-index: 2;
+    transition: width .5s;
+}
+.menu ul{
+    opacity: 0;
+    display: block;
+}
+.menu ul a{
+    padding: 0rem 3rem;
+    font-size: 2rem;
+}
+.menu button{
+    opacity: 0;
+    border: solid 0px;
+    background-color: transparent;
+    margin: 1rem;
+}
 /* *HEADER */
 header{
     display: flex;
@@ -41,6 +64,10 @@ header nav{
     align-self: center;
     text-align: center;
     display: none;
+}
+#open{
+    border: solid 0px;
+    background-color: transparent;
 }
 /* *MAIN */
 section, #about{
@@ -82,7 +109,7 @@ fieldset button{
     border-radius: 1rem;
     border: 1px solid;
 }
-button:hover{
+fieldset button:hover{
     outline: solid 2px black;
 }
 /* *FOOTER */
@@ -98,6 +125,9 @@ footer a{
 }
 /* *DESKTOP */
 @media (min-width:769px){
+    .menu{
+        display: none;
+    }
     main{
         margin: 1rem 4rem;
     }
@@ -107,6 +137,9 @@ footer a{
     header{
         position: static;
         background-color: transparent;
+    }
+    #open{
+        display: none;
     }
     header nav{
         display: inline;
