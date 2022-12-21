@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap');
 :root{
     --txt-clr:hsl(0,0%,10%);
-    --ftr-clr: hsl(0,0%,15%);
+    --ftr-clr: hsl(245, 62%, 4%);
     --acc-clr:hsl(0,0%,85%);
     --link-clr:hsl(240,5%,35%);
 }
@@ -12,18 +13,26 @@ html{
 body{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Inter',sans-serif;
     background: url(images/doodle.svg);
+    font-family: 'Inter',sans-serif;
     color: var(--txt-clr);
 }
 a{
+    font-family: 'Josefin Sans',sans-serif;
     text-decoration: none;
     color: #fff;
-    font-weight: 800;
+    font-weight: 400;
     padding: 0rem .5rem;
 }
 h2,h4,p{
     text-align: center;
+}
+h1,h2,h4{
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 700;
+}
+h2,h4{
+    text-transform: uppercase;
 }
 article >h2{
     color: #fff;
@@ -39,7 +48,7 @@ p{
     position: fixed;
     background-color: #333;
     z-index: 2;
-    transition: width .5s;
+    transition: width .5s ease-out;
 }
 #mobileLinks{
     opacity: 0;
@@ -106,7 +115,7 @@ section .links{
     color: var(--txt-clr);
 }
 #about p{
-    max-width: 60ch;
+    max-width: 50ch;
 }
 /* *FORM */
 fieldset{
@@ -153,21 +162,29 @@ footer a{
     p{
         text-align: left;
     }
+    a:hover{
+        font-weight: 700;
+    }
     /**MOBILE_MENU */
     .menu{
         display: none;
     }
     /**MAIN */
     main{
-        margin: 1rem 4rem;
+        margin: 0;
     }
     .wrap{
         display: flex;
+        align-content: center;
+        justify-content: center;
+        margin: 1rem 4rem;
+    }
+    .wrap2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: url(images/dust_texture.svg);
     }
     /**HEADER */
-    header nav a:hover{
-        font-weight: 800;
-    }
     #open{
         display: none;
     }
@@ -184,6 +201,9 @@ footer a{
         filter: brightness(7);
     }
     /**PROJECTS */
+    #projects{
+        margin: 1rem 4rem;
+    }
     #projects section{
         position: relative;
         display: grid;
@@ -196,9 +216,7 @@ footer a{
     }
     #projects section .links{
         grid-area: 2/1/2/1;
-    }
-    section .links a:hover{
-        outline: solid 2px black;
+        font-weight: 400;
     }
     #projects section p{
         grid-area: 1/2/3/2;
@@ -209,15 +227,19 @@ footer a{
     }
     /**FORM */
     #about, fieldset{
-        padding: 3rem;
+        padding: 3.5rem;
         min-width: 30ch;
+    }
+    #about{
+        margin: 1rem 0rem 1rem 5rem;
+    }
+    fieldset{
+        background-color: transparent;
+        color: #fff;
+        border: 0px;
     }
     fieldset button:hover{
         outline: solid 2px black;
-    }
-    /**FOOTER */
-    footer a:hover{
-        font-weight: 800;
     }
 }
 /* *ADD IN JS*/
