@@ -7,6 +7,7 @@ Live site : [https://denito37.github.io/wdp/]
 - JS
 
 **Features**
+- Feature project Hero section; shows a project with a preview image + project Title & description
 - Showcases my main projects with a description, github repo & live site
 - describes both my design & technical skills w/ a short description on how I use the tool.
 - a small paragraph to let you know a little about me

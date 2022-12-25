@@ -5,6 +5,7 @@
     --ftr-clr: hsl(245, 62%, 4%);
     --acc-clr:hsl(0,0%,85%);
     --link-clr:hsl(240,5%,35%);
+    --bg-clr: hsl(0, 0%, 20%);
 }
 /* *GENERAL */
 html{
@@ -17,6 +18,9 @@ body{
     font-family: 'Inter',sans-serif;
     color: var(--txt-clr);
 }
+input[type = "text"],input[type = "email"],textarea{
+    font-size: 1rem;
+}
 a{
     font-family: 'Josefin Sans',sans-serif;
     text-decoration: none;
@@ -24,14 +28,14 @@ a{
     font-weight: 400;
     padding: 0rem .5rem;
 }
-h2,h4,p{
+h2,h3,p{
     text-align: center;
 }
-h1,h2,h4{
+h1,h2,h3{
     font-family: 'Josefin Sans',sans-serif;
     font-weight: 700;
 }
-h2,h4{
+h2,h3{
     text-transform: uppercase;
 }
 article >h2{
@@ -46,14 +50,14 @@ p{
     height: 0;
     padding: 0;
     position: fixed;
-    background-color: #333;
+    background-color: var(--bg-clr);
     z-index: 2;
-    transition: width .5s ease-out;
 }
 #mobileLinks{
-    opacity: 0;
-    display: none;
     padding: 3rem 0rem;
+}
+.menu ul{
+    display: none ;
 }
 .menu ul a{
     padding: .5rem 3rem;
@@ -66,6 +70,9 @@ header{
     justify-content: space-between;
     padding: 0.25rem 2rem;
     color: #fff;
+}
+header nav ul ul{
+    display: inline;
 }
 header h1 sub{
     font-weight: 200;
@@ -82,25 +89,51 @@ header nav a{
 .github{
     display: none;
 }
-#open{
+#open,#close{
     border: solid 0px;
     border-radius: 50%;
     background-color: transparent;
 }
-#open img{
+#close{
+    display: none;
+}
+#open img,#close img{
     position: fixed;
     right: 1rem;
     top: 1rem;
     border-radius: 50%;
     padding: .5rem;
-    background-color: #333;
+    background-color:var(--bg-clr);
 }
-/* *MAIN */
+/* *HERO */
+.hero{
+    margin: 0rem;
+}
+.hero .txt{
+    margin: 1rem;
+    color: #fff;
+    background-color: var(--bg-clr);
+}
+.hero .txt h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.hero .txt h2{
+    font-size: 2rem;
+}
+.hero .img img{
+    max-width: 100%;
+}
+/* *PROJECTS + SKILLS */
 section{
     margin: 1rem;
     padding: 2rem;
     border: 2px solid var(--acc-clr);
     background-color: #fff;
+}
+.title .subTitle{
+    text-align: center;
+    padding: .5rem;
 }
 section a{
     color: var(--link-clr);
@@ -145,6 +178,7 @@ fieldset button{
     border-radius: 1rem;
     border: 1px solid;
     background-color: #fff;
+    color: var(--txt-clr);
 }
 /* *FOOTER */
 footer{
@@ -165,14 +199,26 @@ footer ul{
     h2{
         min-width: 250px;
     }
+    main{
+        margin: 0;
+    }
     /**MOBILE_MENU */
     .menu{
         display: none;
     }
-    /**MAIN */
-    main{
-        margin: 0;
+    #open button,#close button{
+        display: none;
     }
+    /**HERO */
+    .hero{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 1rem;
+    }
+    .hero .txt p{
+        text-align: center;
+    }
+    /**CONTAINERS */
     .wrap{
         display: flex;
         align-content: center;
@@ -254,17 +300,4 @@ footer ul{
     footer a{
         padding: 0rem 1rem;
     }
-}
-/* *ADD IN JS*/
-.icon{
-    content: url(images/close_FILL0_wght400_GRAD0_opsz48.svg);
-}
-.openMenu{
-    height: 100%;
-    width: 70vw;
-    padding: 1rem 1rem 100% 1rem;
-}
-.showLinks{
-    opacity: 1 !important;
-    display: block !important;
 }
