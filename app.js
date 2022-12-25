@@ -39,12 +39,12 @@ closeM.addEventListener('click', () => {
 if(count == 0){
     heroTitle.innerHTML = "USER ARTS";
     heroPara.innerHTML = " A user inputed photo album with four different themes.";
-    heroImg.innerHTML = '<img src="images/UA-MOBILE.svg" alt= "preview-Of-Feature-Site">'
+    heroImg.innerHTML = '<img src="images/UA-MOBILE.png" alt= "preview-Of-Feature-Site">'
 }
 if(count == 1){
     heroTitle.innerHTML = "ADVICE GENERATOR";
     heroPara.innerHTML = " A fun pastime that gets quotes of great advice from an external API";
-    heroImg.innerHTML = '<img src="images/AG-MOBILE.svg" alt= "preview-Of-Feature-Site">'
+    heroImg.innerHTML = '<img src="images/AG-MOBILE.jpeg" alt= "preview-Of-Feature-Site">'
 }
 function getRandomInt(max) {
     let num = Math.floor(Math.random() * max)
