@@ -54,7 +54,7 @@ p{
     z-index: 2;
 }
 #mobileLinks{
-    padding: 3rem 0rem;
+    padding: 3rem 2rem;
 }
 .menu ul{
     display: none ;
@@ -108,11 +108,13 @@ header nav a{
 /* *HERO */
 .hero{
     margin: 0rem;
+    background-color: var(--bg-clr);
+    padding: 1rem 0rem;
 }
 .hero .txt{
     margin: 1rem;
+    padding: 0rem 0rem 1rem 0rem;
     color: #fff;
-    background-color: var(--bg-clr);
 }
 .hero .txt h1{
     font-size: 3rem;
@@ -120,6 +122,7 @@ header nav a{
 }
 .hero .txt h2{
     font-size: 2rem;
+    font-weight: 400;
 }
 .hero .img img{
     max-width: 100%;
@@ -147,7 +150,7 @@ section .links{
 #about p{
     color: #fff;
     background-color: #050411;
-    max-width: 50ch;
+    max-width: 60ch;
 }
 /* *FORM */
 .wrap2{
@@ -186,6 +189,11 @@ footer{
 }
 footer ul{
     text-align: center;
+}
+@media (min-width:768px){
+    #about p{
+        padding: 0rem 3rem;
+    }
 }
 /* *DESKTOP */
 @media (min-width:769px){
@@ -241,7 +249,7 @@ footer ul{
     }
     .github img{
         padding: .5rem;
-        transition: filter .25s ease-out;
+        transition: filter .3s ease-in-out;
     }
     .github img:hover{
         filter: brightness(7);
@@ -259,6 +267,7 @@ footer ul{
     }
     #projects section h2{
         grid-area: 1/1/1/1;
+        margin: 1rem 0 0 0;
     }
     #projects section .links{
         grid-area: 2/1/2/1;
