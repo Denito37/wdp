@@ -221,7 +221,10 @@ footer ul{
     .hero{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        margin: 1rem;
+        margin: 0rem;
+    }
+    .hero .txt{
+        padding: 2rem;
     }
     .hero .txt p{
         text-align: center;

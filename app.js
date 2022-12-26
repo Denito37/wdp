@@ -44,12 +44,12 @@ if(count == 0){
 if(count == 1){
     heroTitle.innerHTML = "ADVICE GENERATOR";
     heroPara.innerHTML = " A fun pastime that gets quotes of great advice from an external API";
-    heroImg.innerHTML = '<img src="images/AG-MOBILE.jpeg" alt= "preview-Of-Feature-Site">'
+    heroImg.innerHTML = '<img src="images/AG-MOBILE.png" alt= "preview-Of-Feature-Site">'
 }
 function getRandomInt(max) {
     let num = Math.floor(Math.random() * max)
     return num;
-  }
+}
 
 submit.addEventListener('click', (e) => {
     if(email.value == ''){
