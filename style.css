@@ -132,6 +132,7 @@ section{
     margin: 1rem;
     padding: 2rem;
     border: 2px solid var(--acc-clr);
+    border-radius: 1rem;
     background-color: #fff;
 }
 .title .subTitle{
@@ -169,9 +170,13 @@ fieldset{
 }
 fieldset input{
     padding: .5rem;
+    border: 0px solid;
+    border-radius: .5rem;
 }
 fieldset textarea{
     padding: 1rem;
+    border: 0px solid;
+    border-radius: .5rem;
 }
 fieldset button{
     max-width: 6rem;
@@ -221,11 +226,15 @@ footer ul{
     .hero{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        margin: 0rem;
+        margin: 0rem 1rem;
         padding: 2rem 0rem;
     }
     .hero .txt p{
         text-align: center;
+    }
+    .hero .img img{
+        border: 1px solid #999;
+        border-radius: 1rem;
     }
     /**CONTAINERS */
     .wrap{
