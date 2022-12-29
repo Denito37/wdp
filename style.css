@@ -153,40 +153,26 @@ section .links{
     background-color: #050411;
     max-width: 60ch;
 }
-/* *FORM */
+/* *CONTACT */
 .wrap2{
     background: url(images/dust_texture.svg);
     padding-top: 1rem;
 }
-fieldset{
-    display: flex;
-    flex-direction: column;
+.contact{
+    border: 0px;
     color: #fff;
-    margin: 1rem;
-    padding: 2rem;
-    border: 0px solid;
+    text-align: center;
     background-color: transparent;
-    max-width: 700px;
 }
-fieldset input{
-    padding: .5rem;
-    border: 0px solid;
-    border-radius: .5rem;
+.contact h1{
+    font-size: 3rem;
+    background-color: #050411;
 }
-fieldset textarea{
-    padding: 1rem;
-    border: 0px solid;
-    border-radius: .5rem;
-}
-fieldset button{
-    max-width: 6rem;
-    padding: 1rem;
-    margin: .5rem;
-    align-self: center;
-    border-radius: 1rem;
-    border: 1px solid;
-    background-color: #fff;
-    color: var(--txt-clr);
+.contact a{
+    font-size: 1.5rem;
+    background-color: #050411;
+    padding-top: 2rem;
+    color: #fff;
 }
 /* *FOOTER */
 footer{
@@ -259,7 +245,7 @@ footer ul{
     }
     .github img{
         padding: .5rem;
-        transition: filter .3s ease-in-out;
+        transition: filter .3s ease-in;
     }
     .github img:hover{
         filter: brightness(7);
@@ -291,11 +277,9 @@ footer ul{
         padding: 3rem 6rem;
     }
     /**FORM */
-    #about, fieldset{
+    #about{
         padding: 3.5rem;
         min-width: 30ch;
-    }
-    #about{
         margin: 1rem 0rem 1rem 5rem;
     }
     #about h2{
@@ -306,12 +290,17 @@ footer ul{
         font-size: 1.125rem;
         text-align: center;
     }
-    fieldset button{
-        transition: outline .25s ease-out;
+    .contact a{
+        outline: solid 1px #fff;
+        transition: outline .3s ease-out;
     }
-    fieldset button:hover{
-        outline: solid 2px #fff;
-        font-weight: 700;
+    .contact a::before{
+        content: url(images/forward_to_inbox_FILL0_wght400_GRAD0_opsz48.svg);
+        padding-right: .5rem;
+    }
+    .contact a:hover{
+        outline: solid 3px #fff;
+        font-weight: 400;
     }
     footer{
         grid-column:1/3 ;

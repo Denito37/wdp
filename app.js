@@ -1,9 +1,3 @@
-const form = document.getElementById('contact');
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const subject = document.getElementById('subject');
-const message = document.getElementById('message');
-const submit = document.getElementById('submit');
 const openM = document.getElementById('open');
 const closeM = document.getElementById('close');
 const menuIcon =document.querySelector('#open img');
@@ -50,9 +44,3 @@ function getRandomInt(max) {
     let num = Math.floor(Math.random() * max)
     return num;
 }
-
-submit.addEventListener('click', (e) => {
-    if(email.value == ''){
-        e.preventDefault();
-    }
-})
