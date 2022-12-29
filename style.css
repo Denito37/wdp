@@ -64,6 +64,14 @@ p{
     font-size: 2rem;
     display: block;
 }
+.git{
+    margin: .5rem 0rem;
+    text-decoration: underline;
+}
+.git::after{
+    content: url(images/open_in_new_FILL0_wght400_GRAD0_opsz24.svg);
+    padding: .25rem;
+}
 /* *HEADER */
 header{
     display: flex;
@@ -163,6 +171,10 @@ section .links{
     color: #fff;
     text-align: center;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
 }
 .contact h1{
     font-size: 3rem;
@@ -293,9 +305,15 @@ footer ul{
     .contact a{
         outline: solid 1px #fff;
         transition: outline .3s ease-out;
+        max-width: fit-content;
+        padding-top: 0;
     }
-    .contact a::before{
+    .contact #email::before{
         content: url(images/forward_to_inbox_FILL0_wght400_GRAD0_opsz48.svg);
+        padding-right: .5rem;
+    }
+    .contact #linkedin::before{
+        content: url(images/linkedin-icon.svg);
         padding-right: .5rem;
     }
     .contact a:hover{
