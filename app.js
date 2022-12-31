@@ -7,7 +7,7 @@ const hero = document.querySelector('.hero');
 const heroTitle = document.querySelector('.hero h2');
 const heroPara = document.querySelector('.hero p');
 const heroImg = document.querySelector('.hero .img');
-let count = getRandomInt(2);
+let count = getRandomInt(3);
 
 openM.addEventListener('click', () => {
     menu.style.width = "70vw";
@@ -33,12 +33,17 @@ closeM.addEventListener('click', () => {
 if(count == 0){
     heroTitle.innerHTML = "USER ARTS";
     heroPara.innerHTML = " A user inputed photo album with four different themes.";
-    heroImg.innerHTML = '<img src="images/UA-MOBILE.png" alt= "preview-Of-Feature-Site">'
+    heroImg.innerHTML = '<img src="images/UA-M.png" alt= "preview-Of-Feature-Site">'
 }
 if(count == 1){
     heroTitle.innerHTML = "ADVICE GENERATOR";
     heroPara.innerHTML = " A fun pastime that gets quotes of great advice from an external API";
     heroImg.innerHTML = '<img src="images/AG-MOBILE.png" alt= "preview-Of-Feature-Site">'
+}
+if(count == 2){
+    heroTitle.innerHTML = "CSS Collection";
+    heroPara.innerHTML = " A collection of components that showcases what can be done with CSS";
+    heroImg.innerHTML = '<img src="images/CC-M.png" alt= "preview-Of-Feature-Site">'
 }
 function getRandomInt(max) {
     let num = Math.floor(Math.random() * max)
