@@ -32,7 +32,7 @@ closeM.addEventListener('click', () => {
 
 if(count == 0){
     heroTitle.innerHTML = "USER ARTS";
-    heroPara.innerHTML = " A user inputed photo album with four different themes.";
+    heroPara.innerHTML = " A user inputed photo album with three different themes.";
     heroImg.innerHTML = '<img src="images/UA-M.png" alt= "preview-Of-Feature-Site">'
 }
 if(count == 1){
