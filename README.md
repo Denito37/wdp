@@ -1,4 +1,4 @@
-This is my front-end web developer portfolio
+My front-end web developer portfolio
 Live site : [https://denito37.github.io/wdp/]
 
 **Built With**
@@ -14,6 +14,4 @@ Live site : [https://denito37.github.io/wdp/]
 - a contact component to send an email to me
 
 **Purpose**
-- To be a hub of what I'm capable of doing, I aim to continue to better my skills 
-and continue to update my portfolio. Having my projects set up here will allow me 
-to see how far I've grown
+- To be a hub of what I'm capable of doing, I aim to continue to better my skills & continue to update my portfolio. Having my projects set up here will allow me to see how far I've grown.
