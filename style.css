@@ -14,34 +14,32 @@ html{
 body{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     background: url(images/doodle.svg);
     font-family: 'Inter',sans-serif;
     color: var(--txt-clr);
 }
-input[type = "text"],input[type = "email"],textarea{
-    font-size: 1rem;
-}
 a{
     font-family: 'Josefin Sans',sans-serif;
+    font-weight: 400;
     text-decoration: none;
     color: #fff;
-    font-weight: 400;
     padding: 0rem .5rem;
-}
-h2,h3,p{
-    text-align: center;
 }
 h1,h2,h3{
     font-family: 'Josefin Sans',sans-serif;
     font-weight: 700;
 }
 h2,h3{
+    text-align: center;
     text-transform: uppercase;
 }
 article >h2{
+    padding-top: 2rem;
     color: #fff;
 }
 p{
+    text-align: center;
     line-height: 1.5;
 }
 /* *MOBILE MENU */
@@ -117,7 +115,7 @@ header nav a{
 .hero{
     margin: 0rem;
     background-color: var(--bg-clr);
-    padding: 1rem 0rem;
+    padding: 1.5rem 0rem;
 }
 .hero .txt{
     margin: 1rem;
@@ -125,12 +123,20 @@ header nav a{
     color: #fff;
 }
 .hero .txt h1{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 }
 .hero .txt h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
+}
+@media (min-width: 1200px){
+    .hero .txt h1{
+        font-size: 3rem;
+    }
+    .hero .txt h2{
+        font-size: 2rem;
+    }
 }
 .hero .img img{
     max-width: 100%;
@@ -193,29 +199,11 @@ footer{
 footer ul{
     text-align: center;
 }
-@media (min-width:768px){
-    #about p{
-        padding: 0rem 3rem;
-    }
-}
-fieldset{
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    border: 1px solid #fff;
-    margin: 1rem 4rem;
-}
 /* *DESKTOP */
 @media (min-width:821px){
     /**GENERAL */
-    p{
-        text-align: left;
-    }
     a:hover{
         font-weight: 700;
-    }
-    h2{
-        min-width: 250px;
     }
     main{
         margin: 0;
@@ -233,9 +221,6 @@ fieldset{
         grid-template-columns: repeat(2,1fr);
         margin: 0rem 1rem;
         padding: 2rem 0rem;
-    }
-    .hero .txt p{
-        text-align: center;
     }
     .hero .img img{
         border: 1px solid #999;
@@ -288,7 +273,7 @@ fieldset{
     }
     /**SKILLS */
     .design, .tech{
-        padding: 3rem 6rem;
+        padding: 2rem 6rem;
     }
     /**FORM */
     #about{
@@ -300,6 +285,7 @@ fieldset{
         color: inherit;
     }
     #about p{
+        padding: 0rem 3rem;
         line-height: 2;
         font-size: 1.125rem;
         text-align: center;
@@ -319,7 +305,7 @@ fieldset{
         padding-right: .5rem;
     }
     .contact a:hover{
-        outline: solid 3px #fff;
+        outline: solid 5px #fff;
         font-weight: 400;
     }
     footer{
