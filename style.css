@@ -5,7 +5,8 @@
     --ftr-clr: hsl(245, 62%, 4%);
     --acc-clr:hsl(0,0%,85%);
     --link-clr:hsl(240,5%,35%);
-    --bg-clr: hsl(0, 0%, 20%);
+    --bg-clr: #333333;
+    --bg2-clr: #111;
 }
 /* *GENERAL */
 html{
@@ -15,7 +16,6 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background: url(images/doodle.svg);
     font-family: 'Inter',sans-serif;
     color: var(--txt-clr);
 }
@@ -24,7 +24,10 @@ a{
     font-weight: 400;
     text-decoration: none;
     color: #fff;
-    padding: 0rem .5rem;
+    padding: 0rem 1rem;
+}
+a:hover{
+    font-weight: 700;
 }
 h1,h2,h3{
     font-family: 'Josefin Sans',sans-serif;
@@ -36,6 +39,7 @@ h2,h3{
 }
 article >h2{
     padding-top: 2rem;
+    margin: 0;
     color: #fff;
 }
 p{
@@ -74,6 +78,7 @@ p{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.25rem 2rem;
     color: #fff;
 }
@@ -84,13 +89,7 @@ header h1 sub{
     font-weight: 200;
 }
 header nav{
-    align-self: center;
-    text-align: center;
     display: none;
-}
-header nav a{
-    font-weight: 400;
-    padding: 0rem 1rem;
 }
 .github{
     display: none;
@@ -112,12 +111,19 @@ header nav a{
     background-color:var(--bg-clr);
 }
 /* *HERO */
+main{
+    background: url(images/doodle.svg);
+    padding-bottom: 4.4rem;
+}
 .hero{
     margin: 0rem;
     background-color: var(--bg-clr);
     padding: 1.5rem 0rem;
+    align-items: center;
 }
 .hero .txt{
+    display: flex;
+    flex-direction: column;
     margin: 1rem;
     padding: 0rem 0rem 1rem 0rem;
     color: #fff;
@@ -129,6 +135,13 @@ header nav a{
 .hero .txt h2{
     font-size: 1.5rem;
     font-weight: 400;
+}
+.txt .links{
+    text-align: center;
+    padding: 1rem;
+}
+.txt .links a{
+    font-size: 1.25rem;
 }
 @media (min-width: 1200px){
     .hero .txt h1{
@@ -142,12 +155,17 @@ header nav a{
     max-width: 100%;
 }
 /* *PROJECTS + SKILLS */
+.wrap0{
+    background: linear-gradient(#333,80%,#111);
+}
 section{
     margin: 1rem;
+    margin-bottom: 0;
     padding: 2rem;
     border: 2px solid var(--acc-clr);
     border-radius: 1rem;
     background-color: #fff;
+    min-width: 275px;
 }
 .title .subTitle{
     text-align: center;
@@ -162,15 +180,15 @@ section .links{
 .design p, .tech p{
     max-width: 60ch;
 }
-#about p{
-    color: #fff;
-    background-color: #050411;
-    max-width: 60ch;
-}
-/* *CONTACT */
+/* *ABOUT + CONTACT */
 .wrap2{
     background: url(images/dust_texture.svg);
     padding-top: 1rem;
+}
+#about p{
+    color: #fff;
+    background-color: var(--bg2-clr);
+    max-width: 60ch;
 }
 .contact{
     border: 0px;
@@ -184,11 +202,11 @@ section .links{
 }
 .contact h1{
     font-size: 3rem;
-    background-color: #050411;
+    background-color: var(--bg2-clr)
 }
 .contact a{
     font-size: 1.5rem;
-    background-color: #050411;
+    background-color: var(--bg2-clr);
     padding-top: 2rem;
     color: #fff;
 }
@@ -201,13 +219,6 @@ footer ul{
 }
 /* *DESKTOP */
 @media (min-width:821px){
-    /**GENERAL */
-    a:hover{
-        font-weight: 700;
-    }
-    main{
-        margin: 0;
-    }
     /**MOBILE_MENU */
     .menu{
         display: none;
@@ -231,7 +242,8 @@ footer ul{
         display: flex;
         align-content: center;
         justify-content: center;
-        margin: 1rem 4rem;
+        margin: 0rem 4rem;
+        padding: 1rem 0;
     }
     .wrap2{
         display: grid;
@@ -240,7 +252,8 @@ footer ul{
     #projects .contain{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        margin: 1rem 4rem;
+        margin: 0rem 4rem;
+        padding: 1rem 0;
         overflow-x: scroll;
     }
     /**HEADER */

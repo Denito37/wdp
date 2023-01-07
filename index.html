@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio">
-    <link rel="icon" type="image/ico" href="images/favicon.ico">
+    <link rel="icon" href="images/DWD.png">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <script src="mail.js" defer></script>
     <title>Dennes Front-End Portfolio</title>
 </head>
 <body>
@@ -25,32 +24,38 @@
         </nav>
     </div>
 
-    <header>
-        <h1>D<sub>ennes</sub>W<sub>eb</sub>D<sub>ev</sub></h1>
-        <nav>
-            <ul>
-                <ul><a href="#projects">Projects</a></ul>
-                <ul><a href="#skills">Skills</a></ul>
-                <ul><a href="#about">About & Contact</a></ul>
-            </ul>
-        </nav>
-        <a class="github" href="https://github.com/Denito37" target="_blank" rel="noopener noreferrer">
-            <img src="images/github-mark.svg" alt="git-hub-link" style="height: 50px; width: 50px;">
-        </a>
-        <button id="open"> <img src="images/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="mobile-menu"></button>
-        <button id="close"><img src="images/close_FILL0_wght400_GRAD0_opsz48.svg" alt="close-menu"></button>
-    </header>
-
     <main>
+        <header>
+            <h1>D<sub>ennes</sub>W<sub>eb</sub>D<sub>ev</sub></h1>
+            <nav>
+                <ul>
+                    <ul><a href="#projects">Projects</a></ul>
+                    <ul><a href="#skills">Skills</a></ul>
+                    <ul><a href="#about">About & Contact</a></ul>
+                </ul>
+            </nav>
+            <a class="github" href="https://github.com/Denito37" target="_blank" rel="noopener noreferrer">
+                <img src="images/github-mark.svg" alt="git-hub-link" style="height: 50px; width: 50px;">
+            </a>
+            <button id="open"> <img src="images/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="mobile-menu"></button>
+            <button id="close"><img src="images/close_FILL0_wght400_GRAD0_opsz48.svg" alt="close-menu"></button>
+        </header>
+
         <article class="hero">
             <div class="txt">
                 <h1>FEATURED PROJECT:</h1>
                 <h2></h2>
                 <p></p>
+                <div class="links">
+                    <a href="" target="_blank" rel="noopener noreferrer">Live Site</a>
+                    <a href="" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                </div>
             </div>
             <div class="img"></div>
         </article>
+    </main>
 
+    <div class="wrap0" style="position: relative;">
         <article id="projects">
             <h2>Projects</h2>
             <div class="contain">
@@ -156,6 +161,7 @@
                 </section>
             </div>
         </article>
+    </div>
 
         <div class="wrap2">
 
@@ -190,7 +196,6 @@
             </footer>
 
         </div>
-    </main>
 
 </body>
 </html>

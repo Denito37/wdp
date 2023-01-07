@@ -7,6 +7,7 @@ const hero = document.querySelector('.hero');
 const heroTitle = document.querySelector('.hero h2');
 const heroPara = document.querySelector('.hero p');
 const heroImg = document.querySelector('.hero .img');
+const heroLinks = document.querySelectorAll('.txt .links a');
 let count = getRandomInt(3);
 
 openM.addEventListener('click', () => {
@@ -29,21 +30,26 @@ closeM.addEventListener('click', () => {
     openM.style.display = "block";
     closeM.style.display = "none";
 });
-
 if(count == 0){
     heroTitle.innerHTML = "USER ARTS";
     heroPara.innerHTML = " A user inputed photo album with three different themes.";
     heroImg.innerHTML = '<img src="images/UA-M.png" alt= "preview-Of-Feature-Site">'
+    heroLinks[0].href= 'https://denito37.github.io/UserArts/';
+    heroLinks[1].href='https://github.com/Denito37/UserArts'
 }
 if(count == 1){
     heroTitle.innerHTML = "ADVICE GENERATOR";
     heroPara.innerHTML = " A fun pastime that gets quotes of great advice from an external API";
     heroImg.innerHTML = '<img src="images/AG-MOBILE.png" alt= "preview-Of-Feature-Site">'
+    heroLinks[0].href= 'https://denito37.github.io/advice-generator-app-main/';
+    heroLinks[1].href='https://github.com/Denito37/advice-generator-app-main'
 }
 if(count == 2){
     heroTitle.innerHTML = "CSS Collection";
     heroPara.innerHTML = " A collection of components that showcases what can be done with CSS";
     heroImg.innerHTML = '<img src="images/CC-M.png" alt= "preview-Of-Feature-Site">'
+    heroLinks[0].href= 'https://denito37.github.io/cssCollection/';
+    heroLinks[1].href='https://github.com/Denito37/cssCollection'
 }
 function getRandomInt(max) {
     let num = Math.floor(Math.random() * max)
