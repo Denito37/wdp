@@ -9,7 +9,24 @@ const heroPara = document.querySelector('.hero p');
 const heroImg = document.querySelector('.hero .img');
 const heroLinks = document.querySelectorAll('.txt .links a');
 let count = getRandomInt(3);
+const projects = document.querySelectorAll('.contain section');
+const skills = document.querySelectorAll('.wrap section');
 
+// * observe User Scrolling
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry =>{
+        entry.target.classList.toggle('show', entry.isIntersecting)
+    }, {
+        threshold:1,
+    })
+});
+projects.forEach(project =>{
+    observer.observe(project)
+})
+skills.forEach(skill =>{
+    observer.observe(skill)
+})
+// * Mobile Menu
 openM.addEventListener('click', () => {
     menu.style.width = "70vw";
     menu.style.height = "100%";
@@ -30,6 +47,7 @@ closeM.addEventListener('click', () => {
     openM.style.display = "block";
     closeM.style.display = "none";
 });
+// * Generate number to change Hero section
 if(count == 0){
     heroTitle.innerHTML = "USER ARTS";
     heroPara.innerHTML = " A user inputed photo album with three different themes.";
