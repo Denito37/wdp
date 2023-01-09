@@ -11,6 +11,7 @@
 /* *GENERAL */
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     box-sizing: border-box;
