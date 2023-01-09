@@ -16,9 +16,9 @@ const skills = document.querySelectorAll('.wrap section');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry =>{
         entry.target.classList.toggle('show', entry.isIntersecting)
-    }, {
-        threshold:1,
-    })
+    })},
+{
+    threshold:.6,
 });
 projects.forEach(project =>{
     observer.observe(project)
