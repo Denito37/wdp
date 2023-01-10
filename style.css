@@ -76,6 +76,7 @@ p{
 }
 /* *HEADER */
 header{
+    background: url(images/doodle.svg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,12 +114,11 @@ header nav{
 }
 /* *HERO */
 main{
-    background: url(images/doodle.svg);
+    background-color:var(--bg-clr);
     padding-bottom: 4.4rem;
 }
 .hero{
     margin: 0rem;
-    background-color: var(--bg-clr);
     padding: 1.5rem 0rem;
     align-items: center;
 }
