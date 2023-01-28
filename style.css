@@ -20,14 +20,32 @@ body{
     color: var(--txt-clr);
 }
 a{
+    position: relative;
     font-family: 'Josefin Sans',sans-serif;
     font-weight: 400;
     text-decoration: none;
     color: var(--txt-clr);
-    padding: 0rem 1rem;
+    padding: 1rem 0rem;
 }
-a:hover{
-    font-weight: 700;
+a::after{
+    content: '';
+    width: 0;
+    height: 0;
+    transition: all .25s ease-in;
+}
+a:hover::after{
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background-color: var(--acc-clr);
+}
+.contact a:hover::after{
+    width: 0;
+}
+footer a:hover::after{
+    bottom: -3px;
 }
 h1,h2,h3{
     font-family: 'Josefin Sans',sans-serif;
@@ -168,8 +186,14 @@ section{
     text-align: center;
     padding: .5rem;
 }
-section .links{
-    text-align: center;
+.links{
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+.links a{
+    width: fit-content;
 }
 .design p, .tech p{
     max-width: 60ch;
