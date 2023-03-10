@@ -8,7 +8,8 @@ const heroTitle = document.querySelector('.hero h2');
 const heroPara = document.querySelector('.hero p');
 const heroImg = document.querySelector('.hero .img');
 const heroLinks = document.querySelectorAll('.txt .links a');
-let count = getRandomInt(3);
+const email = document.getElementById("email")
+let count = 1;
 const projects = document.querySelectorAll('.contain section');
 const skills = document.querySelectorAll('.wrap section');
 
@@ -49,20 +50,25 @@ closeM.addEventListener('click', () => {
     openM.style.display = "block";
     closeM.style.display = "none";
 });
+// * copy email to clipboard
+email.addEventListener('click', () =>{
+    navigator.clipboard.writeText("Dennes2002@gmail.com")
+    email.style.color = "#00ee00"
+});
 // * Generate number to change Hero section
 if(count == 0){
-    heroTitle.innerHTML = "USER ARTS";
-    heroPara.innerHTML = " A user inputed photo album with three different themes.";
-    heroImg.innerHTML = '<img src="images/UA-M.png" alt= "preview-Of-Feature-Site">'
-    heroLinks[0].href= 'https://denito37.github.io/UserArts/';
-    heroLinks[1].href='https://github.com/Denito37/UserArts'
+    heroTitle.innerHTML = "Dictionary Dynamo";
+    heroPara.innerHTML = "  A dictionary site that is a hub of words with a random word generated on load & a set of flash cards based on school subjects. With the use of two APIs I aimed to make the classic dictionary site with a fun twist.";
+    heroImg.innerHTML = null;
+    heroLinks[0].href= 'https://dictionary-dynamo.vercel.app/';
+    heroLinks[1].href='https://github.com/Denito37/dictionary_dynamo'
 }
 if(count == 1){
     heroTitle.innerHTML = "ADVICE GENERATOR";
     heroPara.innerHTML = " A fun pastime that gets quotes of great advice from an external API";
     heroImg.innerHTML = '<img src="images/AG-MOBILE.png" alt= "preview-Of-Feature-Site">'
-    heroLinks[0].href= 'https://denito37.github.io/advice-generator-app-main/';
-    heroLinks[1].href='https://github.com/Denito37/advice-generator-app-main'
+    heroLinks[0].href= 'https://advice-generator-denito37.vercel.app/';
+    heroLinks[1].href="https://github.com/Denito37/advice_generator"
 }
 if(count == 2){
     heroTitle.innerHTML = "CSS Collection";
